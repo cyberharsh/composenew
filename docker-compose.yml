@@ -1,0 +1,7 @@
+version: '2'
+services:
+ vs:
+  image: cybershelby/persistencexss:47841
+  command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
+  ports:
+   - 8076:80
