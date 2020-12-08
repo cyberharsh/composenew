@@ -5,3 +5,116 @@ services:
   command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
   ports:
    - 8076:80
+ afupload:
+   image: vaday/afupload
+   command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
+   ports:
+    - 8060:80
+ collegesql:
+   image: vaday/collgesql
+   command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
+   ports:
+    - 8061:80
+ gp2:
+   image: vaday/gpeasy:38236
+   ports:
+    - 8045:80
+ gp1:
+   image: vaday/gpeasy:37104
+   ports:
+    - 8046:80
+ wondercms:
+   image: vaday/wondercms43963
+   ports:
+    - 8043:80
+ 40204_php:
+   image: cybershelby/php:40204
+   command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
+   ports:
+    - 8055:80
+ cus:
+   image: cybershelby/customer:49028
+   command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
+   ports:
+    - 8035:80
+ water:
+   image: cybershelby/water:49032
+   command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
+   ports:
+    - 8038:80
+ cse:
+   image: cybershelby/cse:48973
+   command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
+   ports:
+    - 8039:80
+ multi:
+   image: cybershelby/multi:48984
+   command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
+   ports:
+    - 8037:80
+ joomla_afd:
+   image: vaday/joomla:latest
+   command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
+   ports:
+    - 80:80
+ hydra_dirb:
+   image: vaday/vapt_hydra_dirb:2.0
+   command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
+   ports:
+    - 8089:80
+ joomla_sql:
+   image: vaday/joomlasql
+   command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
+   ports:
+    - 8081:80
+ ruby_rails:
+   image: vaday/rubyrails
+   ports:
+    - 3000:3000
+ xss_domain:
+   image: vaday/xssdomain:1913618
+   command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
+   ports:
+    - 8082:80
+ ocr:
+   image: cybershelby/authenticationbypass:48559
+   command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
+   ports:
+    - 8083:80
+ ptms:
+   image: cybershelby/parkingauth:48663
+   command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
+   ports:
+    - 8087:80
+ ocr2:
+   image: cybershelby/victorauth:48631
+   command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
+   ports:
+    - 8088:80
+ ocr:
+   image: cybershelby/clinicmangment:48538
+   command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
+   ports:
+    - 8090:80
+ online_farm:
+   image: cybershelby/onlinefarm:48673
+   command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
+   ports:
+    - 8091:80
+ s2053:
+   image: vaday/s2053
+   ports:
+    - 8040:8080
+ uwsgi:
+   image: vaday/uwsgi
+   ports:
+    - 8042:8080
+ thinkphp:
+   image: vaday/thinkphp5.0.23
+   ports:
+    - 8044:80
+ brokersensor:
+   image: vaday/brokersensor
+   ports:
+    - 1880:1880
+    - 1883:1883
